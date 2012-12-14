@@ -55,8 +55,8 @@ GEM
       multi_json (~> 1.0)
     fast-stemmer (1.0.1)
     hike (1.2.1)
-    hoe (2.9.5)
-      rake (~> 0.8.7)
+    hoe (2.8.0)
+      rake (>= 0.8.7)
     hpricot (0.8.6)
     htmlentities (4.3.1)
     i18n (0.6.1)
@@ -107,7 +107,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (0.8.7)
+    rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
     rfeedfinder (0.9.13)
@@ -154,7 +154,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   dynamic_form
-  hoe (~> 2.9.0)
+  hoe (~> 2.8.0)
   jquery-rails
   pg
   pismo
