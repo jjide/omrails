@@ -1,0 +1,50 @@
+<!-- Hidden things
+ <tr class="tb"><th>Favicon</th></tr>
+<tr class="tb"><td><img="<% #feed.favicon %>" /></td></tr>
+
+<tr class="tb"><th>Last updated</th></tr>
+<tr class="tb"><td><% #feed.last_updated %></td></tr>
+
+<tr class="tb"><th>User</th></tr>
+<tr class="tb"><td><% #feed.user_id %></td></tr>
+-->
+
+alert('Valid!');
+
+
+<%= form_for(@feed) do |f| %>
+
+  <div class="field">
+    <%= f.label :url, "Enter Website Url" %><br />
+    <!--<%= f.url_field(:url) %>-->
+   <input id="feed_url" name="feed[url]" size="30" type="url" data-validation="validate_url" />
+
+  </div>
+
+  <div class="actions" >
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+<script>
+   
+   var validationSettings = {
+       errorMessagePosition : 'element',
+       borderColorOnError : ''
+   };
+
+   $('#new_feed')
+       .submit(function() {
+           if ($(this).validate(false, validationSettings))
+               alert('Valid!');
+
+           return false;
+
+       })
+       .validateOnBlur(false, validationSettings)
+       .showHelpOnFocus();
+
+   
+
+</script>

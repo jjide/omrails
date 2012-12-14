@@ -1,0 +1,34 @@
+<% if user_signed_in? %>
+<%= render :template => "feeds/index" %>
+
+<% else %>
+<div class="center hero-unit">
+	<h1>RSS Follower</h1>
+		
+		<h2 class="lead">
+			Welcome to a new way to follow your RSS Feeds
+			</h2>
+			
+			<%= link_to "Sign up now!", new_user_registration_path, class: "btn" %>
+			
+</div>
+
+<div class="low row-fluid show-grid">
+  <div class="span4 s1">
+  	<h4>Why</h4>
+	<p>There was a need for to bring RSS into the present by updating our interaction with it</p>
+  </div>
+  <div class="span4 s2">
+  	<h4>What</h4>
+	<p>Follow more sites easily through your browser and have access anywhere</p>
+  </div>
+  <div class="span4 s3">
+  	<h4>How</h4>
+	<p>Click the Sign up now to join a select test group and find out more</p>
+  </div>
+</div>
+<div class="container">
+	
+	<h2>Already a user? Just <%= link_to "Sign In", new_user_session_path %></h2> 
+	</div>
+<% end %>

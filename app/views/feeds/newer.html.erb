@@ -1,0 +1,176 @@
+<h1>New feed</h1>
+
+  <!--
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :feed_url %><br />
+    <%= f.text_field :feed_url %>
+  </div>
+  <div class="field">
+    <%= f.label :favicon %><br />
+    <%= f.text_field :favicon %>
+  </div>
+  <div class="field">
+    <%= f.label :last_updated %><br />
+    <%= f.text_field :last_updated %>
+  </div>
+  <div class="field">
+    <%= f.label :latest_post_title %><br />
+    <%= f.text_field :latest_post_title %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+-->
+
+<%= link_to 'Back', feeds_path %>
+
+
+THIS IS THE FORM PAGE
+
+<h1>New feed</h1>
+
+<form accept-charset="UTF-8" action="/feeds" class="new_feed" id="new_feed" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="pAI+jknq0kwFHk0ijQIcqu4QeyzYH6PItYrrT9dVaWs=" /></div>
+	
+	<div class="field">
+	    <label for="feed_url">Enter Websit Url</label><br />
+	    <input id="feed_url" name="url" size="30" type="url" />
+	     <%= error_messages_for @feed.url %>
+	   
+	  </div>
+
+	
+	<div class="actions">
+		<input name="commit" type="submit" value="Create Feed" />
+		
+		<%# format.json { render json: @feed.errors, status: :unprocessable_entity }  %>
+		
+	    
+		
+	  </div>
+
+<!--
+  <div class="field">
+    <label for="feed_name">Name</label><br />
+    <input id="feed_name" name="feed[name]" size="30" type="text" />
+  </div>
+  <div class="field">
+    <label for="feed_url">Url</label><br />
+    <input id="feed_url" name="feed[url]" size="30" type="text" />
+  </div>
+  <div class="field">
+    <label for="feed_feed_url">Feed url</label><br />
+    <input id="feed_feed_url" name="feed[feed_url]" size="30" type="text" />
+  </div>
+  <div class="field">
+    <label for="feed_favicon">Favicon</label><br />
+    <input id="feed_favicon" name="feed[favicon]" size="30" type="text" />
+  </div>
+  <div class="field">
+    <label for="feed_last_updated">Last updated</label><br />
+    <input id="feed_last_updated" name="feed[last_updated]" size="30" type="text" />
+  </div>
+  <div class="field">
+    <label for="feed_latest_post_title">Latest post title</label><br />
+    <input id="feed_latest_post_title" name="feed[latest_post_title]" size="30" type="text" />
+  </div>
+  <div class="field">
+    <label for="feed_user_id">User</label><br />
+    <input id="feed_user_id" name="feed[user_id]" type="number" />
+  </div>
+  <div class="actions">
+    <input name="commit" type="submit" value="Create Feed" />
+  </div>
+-->
+</form>
+<!--><h1> TEST form</h1>
+ <%= render 'form' %> -->
+
+<%= link_to 'Back', feeds_path %>
+
+INSIDE THE FORM
+
+<!--
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :feed_url %><br />
+    <%= f.text_field :feed_url %>
+  </div>
+  <div class="field">
+    <%= f.label :favicon %><br />
+    <%= f.text_field :favicon %>
+  </div>
+  <div class="field">
+    <%= f.label :last_updated %><br />
+    <%= f.text_field :last_updated %>
+  </div>
+  <div class="field">
+    <%= f.label :latest_post_title %><br />
+    <%= f.text_field :latest_post_title %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+-->
+
+BACK UP 2 of FORM
+
+<%= form_for(@feed) do |f| %>
+  <% f.error_messages %>
+  <% if @feed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feed.errors.count, "error") %> prohibited this feed from being saved:</h2>
+
+      <ul>
+      <% @feed.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :url, "Enter Website Url" %><br />
+    <!--<%= f.url_field(:url) %>-->
+   <input id="feed_url" name="feed[url]" size="30" type="url" data-validation="validate_url" />
+
+
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script>
+   
+   var validationSettings = {
+       errorMessagePosition : 'element',
+       borderColorOnError : ''
+   };
+
+   $('#new_feed')
+       .submit(function() {
+           if ($(this).validate(false, validationSettings))
+               alert('Valid!');
+
+           return false;
+       })
+       .validateOnBlur(false, validationSettings)
+       .showHelpOnFocus();
+   
+
+</script>
+
+

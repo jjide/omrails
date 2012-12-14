@@ -1,0 +1,169 @@
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+label{
+	display:inline;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: Helvetica, verdana, sans-serif;
+  color: #000;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+color:#000;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  background-color: white;
+  text-decoration: underline;
+}
+
+
+.hero-unit{
+	background-color: #4f4041; /*#779DBF,#222;*/
+	width: 100%;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	padding-left:0;
+	padding-right:0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.hero-unit h1{
+	color: #FFD498;
+}
+
+.hero-unit h2{
+	color: #A8A096; /*#3F617F;*/
+}
+
+.btn-primary a{
+	color: #FFF;
+}
+
+.container-f{
+	padding:0;
+}
+
+.navbar a{
+	text-decoration: none;
+}
+
+a.btn{
+	text-decoration: none;
+}
+
+.low{
+	width: 980px;
+	padding:0;
+	margin:0 auto;
+	text-align: center;
+	padding-bottom:80px;
+}
+.low h4{
+	color:#22486B; /*#4f4041;*/
+
+}
+.low p{
+	text-align:left;
+	margin:0 auto;
+	padding:15px;
+	color: #000; /*#A8A096;*/
+}
+.span4{
+	padding:0;
+	margin-left:0px;
+	margin-right:0px;
+	padding-bottom:40px;
+	background-color: #CEDCE9; /*A7BED2;*/
+	-webkit-border-radius: 8px;
+	border-radius: 4;
+}
+.s1, .s2, .s3{
+	height:150px;
+}
+
+.user_forms {
+	display: inline;
+
+}
+.user_forms_btn{
+	margin-top:15px;
+}
+
+/* TABLE STUFF */
+
+.tb td{
+	padding:8px;
+
+}
+
+
+/* validation css */
+
+.jquery_form_error_message{
+	display: block;
+	margin-top: 3px;
+	color: red;
+}

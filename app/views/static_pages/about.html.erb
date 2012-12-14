@@ -1,0 +1,13 @@
+
+<h1>About RSS Follower</h1>
+<div class="container">
+<p class="center">
+	<a href="#"><b>RSS Follower</b></a> is a project to change the way you follow the feeds of your favorite sites. <br /><br /><b>This is the sample application... more to come soon</b>
+</p>
+<p class="center"> 
+<% if user_signed_in? %>
+	<%= link_to "Try it!", root_path, class: "btn" %>
+	<% else %>
+	<%= link_to "Try it!", new_user_registration_path, class: "btn" %>
+	<% end %> </p>
+</div>

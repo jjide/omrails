@@ -1,0 +1,42 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @feed.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @feed.url %>
+</p>
+
+<p>
+  <b>Feed url:</b>
+  <%= @feed.feed_url %>
+</p>
+
+<p>
+  <b>Favicon:</b>
+  <%= @feed.favicon %>
+</p>
+
+<p>
+  <b>Last updated:</b>
+  <%= @feed.last_updated %>
+</p>
+
+<p>
+  <b>Latest post title:</b>
+  <%= @feed.latest_post_title %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @feed.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_feed_path(@feed) %> |
+<%= link_to 'Back', root_path %><!--<%= link_to 'Back', feeds_path %>-->
+</div>
