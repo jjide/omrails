@@ -21,7 +21,7 @@ gem 'devise'
 gem 'rfeedfinder'
 gem 'pismo'
 gem 'dynamic_form'
-
+gem 'hoe', '~> 1.5.1' # Heroku's rubygems is too old for hoe 2.9.1 as of 28 Mar 2011
 
 # Gems used only for assets and not required
 # in production environments by default.
